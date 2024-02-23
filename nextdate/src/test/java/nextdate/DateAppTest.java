@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 public class DateAppTest {
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/tests.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/test_cases.csv", numLinesToSkip = 1)
     public void executeCsvTests(int day, int month, int year, String expected) {
         DateApp dateApp = new DateApp(year, month, day);
         assertEquals(expected, dateApp.NextDate());
